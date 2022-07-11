@@ -1,0 +1,62 @@
+:root {
+    --txtMin : 12px;
+    --txtMiddle : 16px;
+    --txtBig : 20px;
+}
+* {margin:0; padding:0; list-style:none; box-sizing: border-box;}
+header {text-align: center; height:120px; line-height: 130px;}
+body {height:100vh; width:100%; }
+#wrap {margin:auto; max-width: 1200px;}
+main {width:100%; height:100%; position:relative; display: flex; gap:10px; flex-wrap:wrap; align-content: flex-start; background-color: #f3f3f3; padding:10px 15px; border: 1px solid #ccc; border-radius: 5px;}
+.screen_out {display: none;}
+main section {flex:1; padding:0 20px;}
+main #sec12 {flex: 1; margin:auto;position:relative;}
+main #sec23 {flex: 1; margin:auto;}
+/* add shadow */
+main #section4 {width:450px;  padding-left: 20px; margin: 10px auto; height: 20px; display: block;}
+main .add1 {width:78px; height:33px; background-color: #fff; border:1px solid #ccc; margin:3px; cursor: pointer; margin-right: 10px; border-radius: 5px;}
+main .on {background-color: #ccc;}
+main #add2 {width:85px; height:33px; background-color: transparent; border:none; cursor: pointer;}
+main h2 {margin: 20px auto 10px;}
+main h2:nth-child(2) {margin: 45px 0 -40px 30px;}
+main #reset_0 {position:absolute; right:45px; top:85px; border:none; width:60px; height:30px; cursor: pointer; background: transparent;}
+/* section1_1 */
+main .ctrl_pannel {margin:50px auto 0; position:relative; width:100%;}
+main .ctrl_pannel ul {background: #fff; border-radius: 5px; width:100%; height:500px; margin: 0 auto 30px; padding: 10px 0 20px;}
+main .ctrl_pannel li {margin: 20px 0 25px 30px; position:relative;}
+main .val {margin:auto; position: absolute; left:calc(50% - 18px); top:50px; font-size: 12px;}
+main .ctrl_pannel ul li:nth-child(1) {margin: 20px 0 0 30px;}
+main .ctrl_pannel ul li:nth-child(2) {margin: 20px 0 30px 30px;}
+main .inner {width:15px; height:15px;}
+main .shadow_color {background: none; border: none; }
+main .box_color {background: none; border: none;}
+main .horizon {margin-top:12px; width:calc(100% - 30px);}
+main .vertical {margin-top:12px; width:calc(100% - 30px);}
+main .blur1 {margin-top:12px; width:calc(100% - 30px);}
+main .spread {margin-top:12px; width:calc(100% - 30px);}
+/* section2 */
+main #section2 {margin:80px auto 0; width:100%;}
+main #preview {width:100%; height:220px; background: #ffffff; margin:auto; border-radius: 5px; box-shadow: 2px 2px 6px 0px #ababab;}
+main .inset {box-shadow: 2px 2px 6px 0px #ababab inset;}
+/* section3 */
+main #section3 {margin:55px auto 30px; width:100%; position:relative;}
+main pre {width:calc(100% - 10px); margin:0; max-width: 100%; overflow: auto; white-space: pre-wrap;}
+main code.hljs {border-radius: 5px; margin:10px 0px 10px; font-size: 12px;overflow:hidden; width:100%; height:140px;}
+main #copy {background: #999; width:100px; height: 30px; border:none; color:#fff; border-radius: 5px;  cursor: pointer; margin:auto; display: block;} 
+main #copytxt {position: fixed; top:-100px;} /*드래그, 텍스트 셀렉트를 위해 만듦. display none은 실행 안 돼서 화면 밖으로 치움*/
+#copy+p {font-size: 13px; margin:auto; display: block; position:absolute;right:calc(50% - 40px); top:245px; display: none;} 
+footer {height:80px; text-align: center; line-height: 80px; }
+
+@media screen and (max-width:550px) {
+    body {margin:0; padding:0;}
+    #wrap {width:100%; overflow:hidden; max-width: 100%; min-width: 288px;}
+    main #reset_0 {top:75px; right:75px;}
+    main { background: #f3f3f3; border-top:1px #ccc; border-bottom:1px #ccc;}
+    main #sec12 {margin-bottom: 0;}
+    main section:not(.ctrl_pannel) {width:calc(100vw - 30px)}
+    main .ctrl_pannel {margin:50px -10px 0;width:calc(100% - 50px);}
+    main #section2 {margin-top:-20px;}
+    main #section3 {margin-top:30px;}
+    main #section4 {padding-left:10px;}
+    main .add1:nth-child(4) {display: none;}
+}

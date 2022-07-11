@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Shadow Generator</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/androidstudio.min.css">
+    <link rel="stylesheet" href="generator.css">
+</head>
+<body>
+<div id="wrap">
+<header>
+    <h1>CSS Box Shadow Generator</h1>
+</header>
+<main>
+    <div id="sec12">
+    <section id="section4">
+        <h2 class="screen_out">Shadow 추가 버튼</h2>
+        <button class="add1">shadow 1</button>
+        <button class="add1" disabled>shadow 2</button>
+        <button id="add2">+ Add shadow</button>
+    </section>
+    <h2>Option</h2>
+    <button id="reset_0">- Reset</button>
+    <section id="section1_1"  class="ctrl_pannel">
+        <h2>section</h2>
+        <ul>
+            <li>inset <input type="checkbox" class="inner"></li>
+            <li>Color <input type="color" class="shadow_color" value="#ababab"></li>
+            <li>Horizontal offset
+                <br><input type="range" class="horizon" max="100" min="-100" step="1" value="2"><span class="val">2px</span></li> 
+            <li>Vertical offset
+                <br><input type="range" class="vertical" max="100" min="-100" step="1" value="2"><span class="val">2px</span></li>
+            <li>Blur
+                <br><input type="range" class="blur1" max="100" min="0" step="1" value="6"><span class="val">6px</span></li>
+            <li>Spread
+                <br><input type="range" class="spread" max="100" min="0" step="1" value="0"><span class="val">0px</span></li>
+            <li>Box color
+                <input type="color" class="box_color" value="#ffffff">
+            </li>
+        </ul>
+    </section>
+    <section id="section1_2" class="ctrl_pannel">
+        <h2>section</h2>
+        <ul>
+            <li>inset <input type="checkbox" class="inner"><p></p></li>
+            <li>Color <input type="color" class="shadow_color" value="#ababab"></li>
+            <li>Horizontal offset
+                <br><input type="range" class="horizon" max="100" min="-100" step="1" value="0"><span class="val">0px</span></li> 
+            <li>Vertical offset
+                <br><input type="range" class="vertical" max="100" min="-100" step="1" value="0"><span class="val">0px</span></li>
+            <li>Blur
+                <br><input type="range" class="blur1" max="100" min="0" step="1" value="0"><span class="val">0px</span></li>
+            <li>Spread
+                <br><input type="range" class="spread" max="100" min="0" step="1" value="0"><span class="val">0px</span></li>
+        </ul>
+    </section>
+    </div>
+    <div id="sec23">
+    <section id="section2">
+        <h2>Preview</h2>
+        <div id="preview"></div>
+    </section>
+    <section id="section3">
+        <h2>Code</h2>
+        <pre><code class="language-css">
+box-shadow: 2px 2px 6px 0px #ababab;
+        </code></pre>
+        <!-- <xmp><div></div></xmp> -->
+        <button id="copy">Copy</button>
+    <p>복사되었습니다</p>
+    <input type="text" id="copytxt">
+    </section>
+</div>
+</main>
+<footer>
+    <address> &copy; Designed by LIH</address>
+</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="generator.js"></script> 
+</body>
+</html>

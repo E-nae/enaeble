@@ -1,0 +1,95 @@
+* {margin:0; padding:0; list-style: none; box-sizing: border-box; font-family: "Noto Sans KR";}
+h2 {display: none;}
+/* HEADER */
+header { height:105px; width:100%; position:relative;}
+header>a {cursor: pointer; display: block; background:no-repeat url(img/logo3.png); width:220px; height:59px; position: absolute; top:50px; left:50%; transform: translateX(-50%); object-fit:cover; text-indent: -9999px; overflow: hidden;}
+header nav {display: none;}
+
+/* MAIN */
+main {position:relative; max-width: 1050px; margin: auto; min-height:800px;} /* width 1123px */
+h3 {color: #cd2a46; font-size: 24px; margin:0 0 20px 5%; padding: 70px 0 30px;}
+main .menu {display: flex; position:absolute; top:75px; left:270px;}
+main .menu li {margin-right: 15px;}
+main .menu li:first-child {min-width: 78px;}
+main .menu li:last-child {min-width: 50px;}
+main .menu button {padding:3px 10px; background: none; border:1px solid #ac9c9c; color:#847878; border-radius: 15px; cursor: pointer;  }
+main .menu li:nth-child(2) button {padding:3px 15px;}
+main .menu button.on {background: #ac9c9c; cursor: pointer; color:#fff}
+
+h3+ul+div:not([class=overall]) {position:fixed; left:0; top:0; width:100%; height:100vh; background: rgb(0, 0, 0, .8); backdrop-filter: blur(5px); display: none; z-index: 100; cursor: pointer;}
+.overall {position:fixed; top:0; left:0; z-index: 200; width:100%; height:100%; background: #000; display: none; cursor: pointer;}
+.overall>img {position:fixed; width:auto; max-height:100% ;overflow-y: scroll; overflow-x: scroll; object-fit: contain; top:50%; left:50%; transform: translate(-50%, -50%);cursor: pointer;}
+.exit {display: none; width:40px; height:40px; border-radius: 50%; background:none; border:1px solid #fff; color:#fff; font-size: 20px; position:fixed; top:15px; right:5px; transform: translate(-50%); z-index: 100; cursor: pointer; line-height: 10px;}
+.exit:hover {transition: ease all .3s; background: #eee; color:#0a0a0a;}
+ul:not([class=menu]) {display:flex; margin:0 auto 50px; height:100%; overflow:auto; align-content:flex-start; flex-direction:row; flex-wrap:wrap;}
+ul:not([class=menu])>li {min-height:240px; overflow: hidden; margin:5px 5px; position:relative; min-width: 218px; flex:1; max-width:430px; height:250px;}
+ul:not([class=menu])>li:not([class=nohover]) {cursor: pointer;}
+ul>li+img {min-height:260px; object-fit:contain;}
+ul>li>p {position:absolute; color:#fff; top:50%; font-size: 16px; left:50%; transform: translate(-50%, -50%);width:150px; text-align: center; margin-top: 150px; word-break: keep-all; width:90%;}
+ul>li:hover .thumb {opacity:0.2; transition:ease all .3s; animation: ani ease 1s 1; overflow: hidden;}
+ul:not([class=menu])>li:hover:not([class=nohover]) {background: rgba(205, 42, 70, 0.8); transition:ease all .3s;}
+ul>li:hover:not([class=nohover])>p {transition:ease all .3s; margin-top: 0px;}
+details {display: none; position: fixed; left:50%; top:50%; transform: translate(-50%, -50%); overflow-y: auto; z-index: 100;}
+details summary {display: none;}
+details img {width:900px; height:450px; object-fit:cover; display: block; margin:auto; cursor: pointer;}
+/* details img:hover {transition: ease all .3s;} */
+details img.popup {width:100%; height:auto; object-fit: contain;}
+details>p {color:#fff; letter-spacing: 0.5px; text-align: center; margin:auto;}
+details>p:first-of-type {font-size:13px; padding-top: 30px; line-height: 13px; color:#d8475f;font-weight: 500;}
+details>p:nth-of-type(2) {font-size: 24px; font-weight: 600; line-height: 27px;}
+details>p:nth-of-type(3) {font-size: 12px; line-height: 25px; font-weight: 200;}
+details>p:last-of-type {font-size: 14px; margin-bottom: 30px; line-height: 20px; font-weight: 100;}
+.hover2 {position:absolute; top:40%; left:50%; transform: translate(-50%, -50%); width:200px; height:20px; color:#353535; background: rgba(255, 255, 255, .5); z-index: 100; font-size: 13px; text-align: center; line-height: 20px; display: none; font-weight: 500; overflow: hidden;}
+#web>li {position:relative;}
+#web img {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);}
+#web>li:hover img { animation:ani4 ease 1s 1;}
+#motion>li {width:270px; height:250px; overflow: hidden; margin:5px 5px; position:relative;}
+#motion img {height:250px; position:absolute; top:50%; left:50%;transform: translate(-50%, -50%); animation: none;}
+#web_href,#motion_href {display: none;}
+/* FOOTER */
+#footer {display: block; margin: auto; width:100%; height:80px;}
+#footer p span {color:#fa536f; font-weight: 500; font-size: 13px;}
+#footer p {font-size: 11px; font-weight: 300; text-align: center;width:100%;}
+
+@keyframes ani {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+@keyframes ani2 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes ani3 {
+    0% {opacity: 0; transform: scale(0);}
+    50% {opacity: .5; transform: scale(1);}
+    100% {opacity: 1; transform: scale(1);}
+}
+@keyframes ani4 {
+    0% {top:-5px; left:-70px; transform: scale(1);}
+    50% {top:-5px; left:-70px;transform: scale(1.2);}
+    100% {top:-5px; left:-70px;transform: scale(1);}
+}
+@media screen and (max-width:700px) {
+    h3 {margin-left: 5%;}
+    main .menu {margin-right: 10px; left:45%;}
+    main .menu li {margin-right: 5px;}
+    details>img {width:100%;}
+}
+@media screen and (max-width:470px) {
+    h3 {margin:20px auto 60px; text-align: center; font-size: 18px; padding:0;}
+    header {height:70px;}
+    header a {top:25px; left:100px; background:no-repeat url(img/logo5.png); width:146px; height:33px;}
+    header span {right:0px; top:20px;}
+    main a[title=all_view] {top:28px;}
+    main .menu {top:45px; left:50%; transform: translateX(-50%); margin-bottom: 15px;}
+    ul:not([class=menu])>li {padding:0; height:150px; min-width:100%; margin-left: 5px;}
+    #graphic, #web, #motion {display: block; max-width:100%; overflow: hidden;margin: auto;}
+    #graphic>li, #web>li, #motion>li {text-align: center;  margin:0 15px 10px 0px;width:calc(100% - 30px);}
+    ul>li>img {width:100%;}
+    #web>li {height:300px;}
+    details img {width:100%; object-fit: cover; height:auto;overflow:scroll; overflow-x: visible;}
+    details>p:nth-of-type(2) {font-size: 20px;}
+    .overall>img {object-fit: contain;}
+    #exit {right:5%;}
+}

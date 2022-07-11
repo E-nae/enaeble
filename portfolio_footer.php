@@ -1,0 +1,1 @@
+<p><span>KILL POINT</span><br> COPYRIGHT &copy; 2022 LIM INHYE ALL RIGHT RESERVED</p>
